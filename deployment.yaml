@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:latest
+        image: prathamesh1115/myapp:latest
         ports:
         - containerPort: 80
 
@@ -39,6 +39,6 @@ spec:
     spec:
       containers:
       - name: apache
-        image: httpd:latest
+        image: prathamesh1115/myapp:latest
         ports:
         - containerPort: 80
