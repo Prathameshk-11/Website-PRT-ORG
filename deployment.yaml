@@ -12,9 +12,14 @@ spec:
       labels:
         app: website
     spec:
+      tolerations:
+        - key: "node-role.kubernetes.io/control-plane"
+          operator: "Exists"
+          effect: "NoSchedule"
       containers:
-      - name: website-container
-        image: <your-dockerhub-username>/website:latest
-        ports:
-        - containerPort: 80
+        - name: website-container
+          image: <your-dockerhub-username>/website:latest
+          ports:
+            - containerPort: 80
+
 
