@@ -1,17 +1,17 @@
-# Use the official Nginx image from the Docker Hub
-FROM nginx:alpine
+# Use official Nginx image
+FROM nginx:latest
 
-# Set the working directory in the container
+# Set working directory
 WORKDIR /usr/share/nginx/html
 
-# Remove the default Nginx configuration
-RUN rm /etc/nginx/conf.d/default.conf
+# Remove default Nginx page
+RUN rm -rf ./*
 
-# Copy the website files into the container
+# Copy website files into container
 COPY . .
 
-# Expose port 80 to the outside world
+# Expose port 80
 EXPOSE 80
 
-# Start Nginx when the container launches
+# Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
