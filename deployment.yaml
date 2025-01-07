@@ -18,7 +18,7 @@ spec:
           effect: "NoSchedule"
       containers:
         - name: website-container
-          image: <your-dockerhub-username>/website:latest
+          image: prathamesh1115/website:latest
           ports:
             - containerPort: 80
 
